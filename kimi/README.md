@@ -4,9 +4,29 @@
 
 ### 步骤
 
-1. **下载插件包**
-   - 从本仓库的 [Releases](https://github.com/frankx628-cyber/rxhumanize-sales-exai/releases) 页面下载最新版 `rxhumanize-sales-exai.kplugin`
-   - 或直接下载仓库根目录的 `kimi/rxhumanize-sales-exai.kplugin` 文件
+1. **获取插件包**
+
+   本仓库提供两种方式获取 `.kplugin` 文件：
+
+   **A. 从 GitHub Releases 下载（最简单）**
+   - 访问 [Releases](https://github.com/frankx628-cyber/rxhumanize-sales-exai/releases) 页面
+   - 下载最新版的 `rxhumanize-sales-exai.kplugin`
+
+   **B. 从仓库文件解码**
+   - 克隆或下载本仓库
+   - 进入 `kimi/` 目录
+   - 运行解码脚本生成 `.kplugin` 文件：
+     ```bash
+     # Linux / macOS
+     bash decode.sh
+
+     # Windows (PowerShell)
+     .\decode.ps1
+     ```
+   - 或者直接使用 Python 解码：
+     ```bash
+     python3 -c "import base64; open('rxhumanize-sales-exai.kplugin','wb').write(base64.b64decode(open('rxhumanize-sales-exai.kplugin.b64').read()))"
+     ```
 
 2. **打开 Kimi**
    - 网页版：https://kimi.com
@@ -16,7 +36,7 @@
    - 左侧边栏点击「插件」
    - 切换到「自定义」tab
    - 在「我创建的」分组下方，点击「导入插件」或「上传插件包」
-   - 选择下载的 `rxhumanize-sales-exai.kplugin` 文件
+   - 选择获取到的 `rxhumanize-sales-exai.kplugin` 文件
    - 确认安装
 
 4. **启用插件**
